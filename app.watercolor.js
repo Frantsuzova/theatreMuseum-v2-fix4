@@ -19,11 +19,11 @@ const pointLorem='История этой точки готовится. Пос�
 const routeLorem='<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
 const DIRECTION_PHOTOS=[{"src": "./assets/direction-new-building.jpg", "alt": "Здание Дирекции. Рисунок для «Ежегодника Императорских театров»", "text": "Здание Дирекции. Рисунок для «Ежегодника Императорских театров»"}, {"src": "./assets/direction-new-office.jpg", "alt": "Кабинет В. А. Теляковского в Дирекции", "text": "Кабинет В. А. Теляковского в Дирекции"}, {"src": "./assets/direction-new-apartment.jpg", "alt": "Служебная квартира В. А. Теляковского в Дирекции", "text": "Служебная квартира В. А. Теляковского в Дирекции"}, {"src": "./assets/direction-new-wardrobe.jpg", "alt": "Главный гардероб петербургских императорских театров", "text": "Главный гардероб петербургских императорских театров"}, {"src": "./assets/direction-new-library.jpg", "alt": "Центральная библиотека Дирекции", "text": "Центральная библиотека Дирекции"}, {"src": "./assets/direction-new-rules.jpg", "alt": "Объявление от Дирекции о правилах поведения во время представления", "text": "Объявление от Дирекции о правилах поведения во время представления"}];
 const routes=[
- {id:1,colorClass:'c1',color:'#ffd33f',colorName:'Жёлтый маршрут',name:'Римский-Корсаков — Шаляпин',title:'1. Римский-Корсаков — Шаляпин',shortTitle:'Римский-Корсаков — Шаляпин',blurb:'Маршрут о творческом взаимопонимании, раннем узнавании таланта и прогулке, в которой разговор продолжается на ходу.',longText:routeLorem,points:[
+ {id:1,colorClass:'c1',color:'#962e2a',name:'Римский-Корсаков — Шаляпин',title:'01. Римский-Корсаков — Шаляпин',shortTitle:'Римский-Корсаков — Шаляпин',blurb:'Маршрут о творческом взаимопонимании, раннем узнавании таланта и прогулке, в которой разговор продолжается на ходу.',longText:routeLorem,points:[
    {id:1,name:'Музей-квартира Н. А. Римского-Корсакова',address:'Загородный проспект, 28',coord:[59.924734,30.340715]},
    {id:2,name:'Театральный музей',address:'площадь Островского, 6',coord:[59.931168,30.336552]}
  ]},
- {id:2,colorClass:'c2',color:'#59c2ff',colorName:'Синий маршрут',name:'Прогулка с Дягилевым',title:'2. Прогулка с Дягилевым',shortTitle:'Прогулка с Дягилевым',blurb:'Санкт-Петербург. Лето 1901 года\n\nПроменад от бывшей Дирекции Императорских театров к Шереметевскому дворцу в компании Сергея Дягилева, Александра Бенуа и Федора Шаляпина.',contextParagraphs:['Санкт-Петербург. Лето 1901 года','Променад от бывшей Дирекции Императорских театров к Шереметевскому дворцу в компании Сергея Дягилева, Александра Бенуа и Федора Шаляпина, только что вернувшегося с триумфальных гастролей в Милане.','Слушателей ждет погружение в художественный мир 1900-х годов полный интриг, конфликтов и творческих прорывов, которые определили развитие искусства в XX веке.'],longText:routeLorem,points:[
+ {id:2,colorClass:'c2',color:'#962e2a',name:'Прогулка с Дягилевым',title:'02. Прогулка с Дягилевым',shortTitle:'Прогулка с Дягилевым',blurb:'Санкт-Петербург. Лето 1901 года\n\nПроменад от бывшей Дирекции Императорских театров к Шереметевскому дворцу в компании Сергея Дягилева, Александра Бенуа и Федора Шаляпина.',contextParagraphs:['Санкт-Петербург. Лето 1901 года','Променад от бывшей Дирекции Императорских театров к Шереметевскому дворцу в компании Сергея Дягилева, Александра Бенуа и Федора Шаляпина, только что вернувшегося с триумфальных гастролей в Милане.','Слушателей ждет погружение в художественный мир 1900-х годов полный интриг, конфликтов и творческих прорывов, которые определили развитие искусства в XX веке.'],longText:routeLorem,points:[
    {id:1,name:'Дирекция Императорских театров',currentName:'Театральный музей',images:DIRECTION_PHOTOS,address:'ул. Зодчего Росси, д. 2, литера А (вход со стороны пл. Островского)',summary:'Тут вершилась история русского театра, а сегодня представлены уникальные театральные артефакты…',coord:[59.930628,30.336037]},
    {id:2,name:'Публичная библиотека',address:'площадь Островского, 1/3',coord:[59.933492,30.335604]},
    {id:3,name:'Гостиница «Европа» / Большой зал Филармонии',address:'Михайловская улица, 2',coord:[59.936061,30.331481]},
@@ -32,11 +32,11 @@ const routes=[
    {id:6,name:'Доходный дом П. А. Фокина',address:'набережная реки Фонтанки, 5 / Караванная улица, 2',coord:[59.937600,30.342400]},
    {id:7,name:'Шереметевский дворец',currentName:'Музей музыки',address:'набережная реки Фонтанки, 34',coord:[59.936471,30.345486]}
  ]},
- {id:3,colorClass:'c3',color:'#ce68ff',colorName:'Фиолетовый маршрут',name:'Фонтанный дом',title:'3. Фонтанный дом',shortTitle:'Фонтанный дом',blurb:'Маршрут о Фонтанном доме, памяти музыкального салона и дружеской встрече, из которой рождается разговор о прошлом.',longText:routeLorem,points:[
+ {id:3,colorClass:'c3',color:'#962e2a',name:'Фонтанный дом',title:'03. Фонтанный дом',shortTitle:'Фонтанный дом',blurb:'Маршрут о Фонтанном доме, памяти музыкального салона и дружеской встрече, из которой рождается разговор о прошлом.',longText:routeLorem,points:[
    {id:1,name:'Шереметевский дворец',currentName:'Музей музыки',address:'набережная реки Фонтанки, 34',coord:[59.936471,30.345486]},
    {id:2,name:'Музей-квартира семьи актёров Самойловых',address:'Стремянная улица, 8',coord:[59.931265,30.350453]}
  ]},
- {id:4,colorClass:'c4',color:'#7ee36a',colorName:'Зелёный маршрут',name:'Репин — Серов',title:'4. Репин — Серов',shortTitle:'Репин — Серов',blurb:'Маршрут о преемственности, художественном взгляде двух поколений и движении между памятью и ожиданием нового.',longText:routeLorem,points:[
+ {id:4,colorClass:'c4',color:'#962e2a',name:'Репин — Серов',title:'04. Репин — Серов',shortTitle:'Репин — Серов',blurb:'Маршрут о преемственности, художественном взгляде двух поколений и движении между памятью и ожиданием нового.',longText:routeLorem,points:[
    {id:1,name:'Музей-квартира семьи актёров Самойловых',address:'Стремянная улица, 8',coord:[59.931265,30.350453]},
    {id:2,name:'Музей-квартира Н. А. Римского-Корсакова',address:'Загородный проспект, 28',coord:[59.924734,30.340715]}
  ]}
@@ -136,11 +136,13 @@ function show(name,source='intro'){
 function updateRouteUI(){
  const r=route();
  const p=point();
+ const ink='#962e2a';
+ [pointSheet,routeDetailModal,$('mapContext')].forEach(el=>el?.style.setProperty('--route-ink',ink));
  routesScreen?.style.setProperty('--active-route-color',r.color);
  routeDetailModal?.style.setProperty('--active-route-color',r.color);pointSheet?.style.setProperty('--active-route-color',r.color);
  routeTitle.textContent=r.title; routeText.textContent=r.blurb;
- pointCounter.textContent=`Точка ${p.id} из ${r.points.length}`; mapPointTitle.textContent=p.name; if(p.name==='Гостиница «Европа» / Большой зал Филармонии')mapPointTitle.innerHTML='Гостиница «Европа»<br>Большой зал Филармонии'; const now=$('mapPointNow');if(now){now.textContent=p.currentName?`Сегодня: ${p.currentName}`:'';now.hidden=!p.currentName;} const contextRoute=$('contextRoute'),contextAddress=$('contextAddress');if(contextRoute){$('mapContext')?.style.setProperty('--active-route-color',r.color);contextRoute.textContent=String(r.id).padStart(2,'0');contextRoute.style.color=r.color;}if(contextAddress)contextAddress.textContent=p.address; mapPointTitle.removeAttribute('data-title-size'); if(mapPointAddress)mapPointAddress.textContent=p.address; mapPointText.textContent=p.summary||pointLorem;
- if(peekRouteText)peekRouteText.textContent=`#${r.id}`; peekPointNum.textContent=p.id; peekPointPin.className=`peek-pin route-${r.colorClass}`;
+ pointCounter.textContent=`Точка ${String(p.id).padStart(2,'0')} из ${String(r.points.length).padStart(2,'0')}`; mapPointTitle.textContent=p.name; if(p.name==='Гостиница «Европа» / Большой зал Филармонии')mapPointTitle.innerHTML='Гостиница «Европа»<br>Большой зал Филармонии'; const now=$('mapPointNow');if(now){now.textContent=p.currentName?`Сегодня: ${p.currentName}`:'';now.hidden=!p.currentName;} const contextRoute=$('contextRoute'),contextAddress=$('contextAddress');if(contextRoute){$('mapContext')?.style.setProperty('--active-route-color',r.color);contextRoute.textContent=String(r.id).padStart(2,'0');contextRoute.style.color=r.color;}if(contextAddress)contextAddress.textContent=p.address; mapPointTitle.removeAttribute('data-title-size'); if(mapPointAddress)mapPointAddress.textContent=p.address; mapPointText.textContent=p.summary||pointLorem;
+ if(peekRouteText)peekRouteText.textContent=`#${String(r.id).padStart(2,'0')}`; peekPointNum.textContent=String(p.id).padStart(2,'0'); peekPointPin.className=`peek-pin route-${r.colorClass}`;
  const audioActLabel=$('audioActLabel');if(audioActLabel)audioActLabel.textContent=`Акт ${p.id}`;
  if(audio){const nextSrc=p.audio||'./assets/1.mp3';if(audio.getAttribute('src')!==nextSrc){audio.src=nextSrc;resetAudio();}}
  document.querySelectorAll('.pin,.tab').forEach(el=>el.classList.toggle('active',Number(el.dataset.route)===r.id));document.querySelectorAll('.route-choice').forEach(el=>{const expanded=routeChoiceExpanded&&Number(el.dataset.route)===r.id;el.classList.toggle('active',expanded);el.setAttribute('aria-expanded',String(expanded));});const activeChoice=document.querySelector(`.route-choice[data-route="${r.id}"]`),choiceList=$('routeChoiceList'),detail=document.querySelector('.route-select-detail');if(activeChoice&&choiceList&&detail&&detail.previousElementSibling!==activeChoice)activeChoice.after(detail);if(detail)detail.hidden=!routeChoiceExpanded;const routeDock=document.querySelector('.route-action-dock');if(routeDock)routeDock.hidden=!routeChoiceExpanded;
@@ -168,8 +170,8 @@ function selectPoint(id,{fromMap=false}={}){
 
 function changePoint(step){const r=route();const next=Math.max(1,Math.min(r.points.length,point().id+step));if(next!==point().id)selectPoint(next)}
 function updatePointNavState(){const p=point(),r=route();const back=$('mapBack'),next=$('nextRoute');if(back)back.disabled=p.id===1;if(next)next.disabled=p.id===r.points.length;}
-function openSheet(){pointSheet.classList.remove('closed');yandexScreen.classList.add('sheet-open');yandexScreen.classList.remove('sheet-closed');resizeMapSoon(); focusActiveRouteForOpenSheet(); }
-function closeSheet(){pointSheet.classList.add('closed');yandexScreen.classList.add('sheet-closed');yandexScreen.classList.remove('sheet-open');resizeMapSoon(); focusActiveRouteForClosedSheet(); }
+function openSheet(){$('sheetToggle').setAttribute('aria-label','Свернуть карточку');$('sheetToggle').setAttribute('aria-expanded','true');pointSheet.classList.remove('closed');yandexScreen.classList.add('sheet-open');yandexScreen.classList.remove('sheet-closed');resizeMapSoon(); focusActiveRouteForOpenSheet(); }
+function closeSheet(){$('sheetToggle').setAttribute('aria-label','Развернуть карточку');$('sheetToggle').setAttribute('aria-expanded','false');pointSheet.classList.add('closed');yandexScreen.classList.add('sheet-closed');yandexScreen.classList.remove('sheet-open');resizeMapSoon(); focusActiveRouteForClosedSheet(); }
 function toggleSheet(){pointSheet.classList.contains('closed')?openSheet():closeSheet()}
 function focusActiveRouteForOpenSheet(){
  if(!ymap) return;
@@ -193,7 +195,7 @@ function renderDrawerList(){
  drawerProgressLabel.textContent=`${Math.min(completed,r.points.length)} / ${r.points.length}`;
  drawerProgressLine.style.width=`${Math.min(completed,r.points.length)/r.points.length*100}%`;drawerProgressLine.style.background=r.color;
  const progressMetaLabel=drawerProgressLabel?.parentElement?.querySelector('span:last-child');if(progressMetaLabel)progressMetaLabel.textContent='точек';
- drawerList.innerHTML=r.points.map(p=>`<button class="route-list-item ${r.colorClass} ${statusForPoint(r.id,p.id)} ${point().id===p.id?'active current-origin':''}" style="--active-route-color:${r.color}" data-point="${p.id}" type="button"><span class="badge">${p.id}</span><span class="title"><strong>${p.name}</strong><small>${p.address}</small></span><span class="status">${labelForPoint(r.id,p.id)}</span></button>`).join('');
+ drawerList.innerHTML=r.points.map(p=>`<button class="route-list-item ${r.colorClass} ${statusForPoint(r.id,p.id)} ${point().id===p.id?'active current-origin':''}" style="--active-route-color:${r.color}" data-point="${p.id}" type="button"><span class="badge">${String(p.id).padStart(2,'0')}</span><span class="title"><strong>${p.name}</strong><small>${p.address}</small></span><span class="status">${labelForPoint(r.id,p.id)}</span></button>`).join('');
  drawerList.querySelectorAll('[data-point]').forEach(btn=>btn.addEventListener('click',()=>{selectPoint(btn.dataset.point);closeDrawer();}));
  updateStepEstimate();
  updateDrawerHint();
@@ -473,7 +475,7 @@ function selectGalleryItem(index){
 function renderPointGallery(){
  if(!pointGalleryBoard || !galleryTitle || !galleryHeaderKicker) return;
  const r=route();
- galleryHeaderKicker.textContent=`Точка маршрута #${r.id}`;
+ galleryHeaderKicker.textContent=`Маршрут ${String(r.id).padStart(2,'0')}`;
  galleryTitle.textContent=r.shortTitle;
  galleryState.items=galleryItemsForRoute(r);
  galleryState.activeIndex=0;
@@ -496,7 +498,7 @@ function renderPointStory(){
  if(!pointStoryScroll) return;
  const r=route();
  const locationTitle=(r.shortTitle.split('→')[0]||r.shortTitle).trim();
- if(storyHeaderKicker) storyHeaderKicker.textContent=`Точка маршрута #${r.id}`;
+ if(storyHeaderKicker) storyHeaderKicker.textContent=`Маршрут ${String(r.id).padStart(2,'0')}`;
  pointStoryScroll.innerHTML=`
    <article class="story-article">
      <div class="story-opening-meta story-opening-meta-compact">
@@ -560,9 +562,9 @@ function openPointOverlay(overlay){
 const walkGuideModal=$('walkGuideModal'),routeDetailModal=$('routeDetailModal');
 function openContentModal(modal){if(!modal)return;modal.hidden=false;modal.removeAttribute('hidden');modal.setAttribute('aria-hidden','false');if(modal.id==='walkGuideModal')modal.querySelector('.walk-guide-scroll').scrollTop=0;requestAnimationFrame(()=>modal.classList.add('open'));}
 function closeContentModal(modal){if(!modal)return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');setTimeout(()=>{if(!modal.classList.contains('open'))modal.hidden=true},460);}
-function renderRouteDetail(){const r=route();routeDetailModal?.style.setProperty('--active-route-color',r.color);$('routeDetailKicker').textContent=`${r.colorName} · маршрут ${String(r.id).padStart(2,'0')}`;$('routeDetailTitle').innerHTML=r.id===1?'Римский-Корсаков<br>— Шаляпин':r.id===2?'Прогулка<br>с Дягилевым':r.name;$('routeDetailSubtitle').textContent=r.id===2?r.blurb:r.blurb.split(',')[0].replace(/\.$/,'')+'.';$('routeStart').textContent=r.points[0].name;$('routeEnd').textContent=r.points.at(-1).name;$('routeDetailLong').innerHTML='';$('routeContextCopy').innerHTML=(r.contextParagraphs||[r.blurb]).map(text=>'<p>'+text+'</p>').join('');renderRouteCast();requestAnimationFrame(()=>observeStorySections(routeDetailModal));}
-let infoGalleryVariant=["v1","v2","v3"].includes(localStorage.getItem("theatre-gallery-variant-v55"))?localStorage.getItem("theatre-gallery-variant-v55"):"v3";
-let quoteVariantMode=localStorage.getItem('theatre-quote-variant')==='v2'?'v2':'v1';
+function renderRouteDetail(){const r=route();routeDetailModal?.style.setProperty('--active-route-color',r.color);$('routeDetailKicker').textContent=`Маршрут ${String(r.id).padStart(2,'0')}`;$('routeDetailTitle').innerHTML=r.id===1?'Римский-Корсаков<br>— Шаляпин':r.id===2?'Прогулка<br>с Дягилевым':r.name;$('routeDetailSubtitle').textContent=r.id===2?r.blurb:r.blurb.split(',')[0].replace(/\.$/,'')+'.';$('routeStart').textContent=r.points[0].name;$('routeEnd').textContent=r.points.at(-1).name;$('routeDetailLong').innerHTML='';$('routeContextCopy').innerHTML=(r.contextParagraphs||[r.blurb]).map(text=>'<p>'+text+'</p>').join('');renderRouteCast();requestAnimationFrame(()=>observeStorySections(routeDetailModal));}
+let infoGalleryVariant='v2';
+let quoteVariantMode='v2';
 const quoteTypingJobs=new WeakMap();
 function prepareQuoteTyping(quote){
  if(quote.dataset.typingReady)return;
@@ -632,7 +634,7 @@ function closeInfoGalleryFullscreen(){
  if(full){full.classList.remove('open');setTimeout(()=>{if(!full.classList.contains('open'))full.hidden=true;},220);}
 }
 function renderPointStory(){
- if(!pointStoryScroll)return;document.getElementById('infoGalleryFullscreen')?.remove();const r=route(),p=point();if(storyHeaderKicker)storyHeaderKicker.textContent=`Маршрут ${String(r.id).padStart(2,'0')} · точка ${p.id}`;if($('storyHeaderAddress'))$('storyHeaderAddress').textContent=p.address;
+ if(!pointStoryScroll)return;document.getElementById('infoGalleryFullscreen')?.remove();const r=route(),p=point();if(storyHeaderKicker)storyHeaderKicker.textContent=`Маршрут ${String(r.id).padStart(2,'0')} · точка ${String(p.id).padStart(2,'0')}`;if($('storyHeaderAddress'))$('storyHeaderAddress').textContent=p.address;
  infoGalleryState.items=storyGalleryItems(p);infoGalleryState.activeIndex=0;
  const isDirection=r.id===2&&p.id===1;
  const intro=isDirection?[
@@ -648,9 +650,8 @@ function renderPointStory(){
  pointStoryScroll.innerHTML=`<article class="story-article info-story-article">
    <div class="story-rule story-rule-first"><span>История места</span><i></i></div>
    <section class="story-section"><div class="story-columns">${intro.map((t,index)=>`<p class="story-prose-block">${t}</p>`).join('')}</div></section>
-   ${isDirection?'<div class="gallery-compare quote-compare" aria-label="Вариант цитаты"><button type="button" data-quote-variant="v1">V1</button><button type="button" data-quote-variant="v2">V2</button><button type="button" data-quote-complete hidden>Показать целиком</button></div><blockquote class="story-quote"><span class="story-quote-mark">“</span><p>В приёмной у директора Императорских театров, князя Волконского, висела огромная картина Айвазовского — «Буря». Сам князь говорил, что она как нельзя лучше передавала обстановку в его ведомстве.</p></blockquote>':''}
+   ${isDirection?'<div class="gallery-compare quote-compare" aria-label="Показ цитаты"><button type="button" data-quote-complete hidden>Показать целиком</button></div><blockquote class="story-quote"><span class="story-quote-mark">“</span><p>В приёмной у директора Императорских театров, князя Волконского, висела огромная картина Айвазовского — «Буря». Сам князь говорил, что она как нельзя лучше передавала обстановку в его ведомстве.</p></blockquote>':''}
    <div class="story-rule"><span>Галерея</span><i></i></div>
-   <div class="gallery-compare" aria-label="Вариант фотогалереи"><span>Галерея</span><button type="button" data-gallery-variant="v1" aria-pressed="${infoGalleryVariant==='v1'}">V1</button><button type="button" data-gallery-variant="v2" aria-pressed="${infoGalleryVariant==='v2'}">V2</button><button type="button" data-gallery-variant="v3" aria-pressed="${infoGalleryVariant==='v3'}">V3</button></div>
    <figure class="story-image-band story-image-slider" data-gallery-variant="${infoGalleryVariant}" aria-label="Фотографии точки">
      <div class="gallery-v2-top"><span>Архив</span><span id="infoGalleryV2Counter">1 из ${infoGalleryState.items.length}</span></div>
      <div class="info-gallery-thumbs" aria-label="Миниатюры фотографий">${infoGalleryState.items.map((item,index)=>`<button type="button" data-info-gallery-index="${index}" class="info-gallery-thumb ${index===0?'active':''}" aria-label="Фото ${index+1}: ${item.alt}"><img src="${item.src}" alt=""></button>`).join('')}</div>
@@ -742,7 +743,7 @@ function createRouteLayout(p,index,r){
  const st=statusForPoint(r.id,p.id);
  const color=r.color;
  const activeClass = point().id===p.id ? 'active' : '';
- return ymaps.templateLayoutFactory.createClass(`<div class="route-pin-layout ${r.colorClass} ${st} ${activeClass}" style="--route-color:${color};opacity:1;filter:none;" data-point="${p.id}"><span class="pulse-ring ring-a"></span><span class="pulse-ring ring-b"></span><div class="pin-badge" style="background:${color};color:${color};opacity:1;filter:none;"><span class="num">${index+1}</span></div></div>`);
+ return ymaps.templateLayoutFactory.createClass(`<div class="route-pin-layout ${r.colorClass} ${st} ${activeClass}" style="--route-color:${color};opacity:1;filter:none;" data-point="${p.id}"><span class="pulse-ring ring-a"></span><span class="pulse-ring ring-b"></span><div class="pin-badge" style="background:${color};color:${color};opacity:1;filter:none;"><span class="num">${String(index+1).padStart(2,'0')}</span></div></div>`);
 }
 function createLandmarkLayout(l){return ymaps.templateLayoutFactory.createClass(`<div class="landmark-layout"><img src="${l.img}" alt=""></div>`)}
 
@@ -799,7 +800,7 @@ function fitSelectedRouteBounds(){
  const bounds=[[Math.min(...lats),Math.min(...lons)],[Math.max(...lats),Math.max(...lons)]];
  ymap.setBounds(bounds,{checkZoomRange:true,zoomMargin:[116,38,170,38]});
 }
-function updateMapMarkers(){if(!routeObjects.length||!window.ymaps)return;const r=route();routeObjects.forEach((obj,index)=>{const p=r.points.find(x=>x.id===obj.pointId);if(p)obj.options.set('iconLayout',createRouteLayout(p,index,r));})}
+function updateMapMarkers(){if(!routeObjects.length||!window.ymaps)return;const r=route();routeObjects.forEach((obj,index)=>{const p=r.points.find(x=>x.id===obj.pointId);if(p){obj.options.set('iconLayout',createRouteLayout(p,index,r));obj.options.set('iconShape',{type:'Rectangle',coordinates:point().id===p.id?[[-24,-58],[24,0]]:[[-22,-22],[22,22]]});obj.options.set('zIndex',point().id===p.id?140:110);}})}
 function resizeMapSoon(){if(!ymap)return; [50,250,500].forEach(t=>setTimeout(()=>ymap.container.fitToViewport(),t))}
 function haversine(a,b){
  const toRad=v=>v*Math.PI/180;
@@ -848,7 +849,7 @@ function locateUser(){
  sharedLocation(pos=>{
    const coords=[pos.coords.latitude,pos.coords.longitude];
    if(userMark)ymap.geoObjects.remove(userMark);
-   userMark=new ymaps.Placemark(coords,{hintContent:'Вы здесь'},{iconLayout:ymaps.templateLayoutFactory.createClass('<div class="route-pin-layout user-layout active" style="--route-color:#c93f7b;opacity:1;filter:none;"><div class="pin-badge" style="background:#c93f7b;color:#c93f7b;opacity:1;filter:none;"><span class="num">◎</span></div></div>'),iconShape:{type:'Rectangle',coordinates:[[-24,-58],[24,0]]},zIndex:140});
+   userMark=new ymaps.Placemark(coords,{hintContent:'Вы здесь'},{iconLayout:ymaps.templateLayoutFactory.createClass('<div class="route-pin-layout user-layout active" style="--route-color:#962e2a;opacity:1;filter:none;"><div class="pin-badge" style="background:#962e2a;color:#962e2a;opacity:1;filter:none;"><span class="num">◎</span></div></div>'),iconShape:{type:'Rectangle',coordinates:[[-24,-58],[24,0]]},zIndex:140});
    ymap.geoObjects.add(userMark);
    const r=route();r.points.forEach(p=>{if(haversine(coords,p.coord)<=220)markPassed(r.id,p.id)});
    ymap.setCenter(coords,15,{duration:300});
@@ -860,7 +861,7 @@ function formatTime(s){if(!isFinite(s))return'00:00';return`${String(Math.floor(
 function resetAudio(){audio.pause();audio.currentTime=0;audioPlay.classList.remove('playing');audioSeek.value=0;audioCurrent.textContent='00:00'}
 function toggleAudio(){audio.paused?audio.play():audio.pause()}
 function safeOn(id,ev,fn){const el=$(id);if(el)el.addEventListener(ev,fn)}
-function startSelectedRoute(){$('fullRouteAudio')?.pause();closeContentModal(routeDetailModal);show('yandex','routes');setTimeout(()=>{updateRouteUI();openSheet();},180);}
+function startSelectedRoute(){$('fullRouteAudio')?.pause();closeContentModal(routeDetailModal);show('yandex','routes');setTimeout(()=>{updateRouteUI();closeSheet();},180);}
 function rememberHomeOrigin(){
  homeReturnState={routeId:selectedRoute,pointId:point().id,sheetOpen:!pointSheet.classList.contains('closed')};
  try{sessionStorage.setItem(HOME_RETURN_KEY,JSON.stringify(homeReturnState));}catch(error){}
@@ -875,7 +876,7 @@ function restoreHomeOrigin(){
 }
 try{homeReturnState=JSON.parse(sessionStorage.getItem(HOME_RETURN_KEY)||'null');}catch(error){homeReturnState=null;}
 if(homeReturnState){const button=$('returnToRoute');if(button){button.hidden=false;button.querySelector('span').textContent=`Маршрут ${String(homeReturnState.routeId).padStart(2,'0')} · точка ${homeReturnState.pointId}`;}}
-safeOn('chooseRoute','click',()=>{guideStep=0;guideColombinaSeen=false;renderGuideStep();openContentModal(walkGuideModal)});
+safeOn('chooseRoute','click',()=>{guideStep=0;renderGuideStep();openContentModal(walkGuideModal)});
 safeOn('goMapFromIntro','click',()=>show('routes'));
 safeOn('returnToRoute','click',restoreHomeOrigin);
 safeOn('openRouteMap','click',startSelectedRoute);
@@ -895,9 +896,11 @@ safeOn('closeWalkGuide','click',()=>closeContentModal(walkGuideModal));
 safeOn('guideRouteSelect','click',()=>{closeContentModal(walkGuideModal);show('routes','intro');});
 function openRouteDetailFrom(origin){routeDetailOrigin=origin;$('startRouteFromDetail').textContent=origin==='drawer'?'Продолжить прогулку':'Начать прогулку';renderRouteDetail();openContentModal(routeDetailModal)}
 safeOn('openRouteDetail','click',()=>openRouteDetailFrom('routes'));
-let guideStep=0,guideColombinaSeen=false;
+let guideStep=0,guideCatSeen=false;
 function renderGuideStep(){
- const pointing=walkGuideModal.querySelector('.guide-footer-colombina');if(guideStep===3)guideColombinaSeen=true;if(pointing)pointing.hidden=!guideColombinaSeen;
+ if(guideStep>=0&&guideStep<3)guideCatSeen=false;
+ if(guideStep===3)guideCatSeen=true;
+ const cat=walkGuideModal.querySelector('.guide-kept-cat');if(cat)cat.hidden=!guideCatSeen;
  document.querySelectorAll('[data-walk-section]').forEach(section=>{
   const open=Number(section.dataset.walkSection)===guideStep;
   section.classList.toggle('is-open',open);
@@ -906,7 +909,8 @@ function renderGuideStep(){
  });
 }
 document.querySelectorAll('[data-walk-step]').forEach(button=>button.addEventListener('click',()=>{
- guideStep=guideStep===Number(button.dataset.walkStep)?-1:Number(button.dataset.walkStep);renderGuideStep();
+ const next=Number(button.dataset.walkStep);if(next<3)guideCatSeen=false;
+ guideStep=guideStep===next?-1:next;renderGuideStep();
  if(guideStep>=0)requestAnimationFrame(()=>revealGuidePanel(button.closest('.walk-step')));
 }));
 renderGuideStep();
@@ -922,10 +926,10 @@ safeOn('closePointGallery','click',(e)=>{e.preventDefault();e.stopPropagation();
 safeOn('closePointStory','click',(e)=>{e.preventDefault();e.stopPropagation();closePointOverlay(pointStoryOverlay);});safeOn('pointStoryBottomBack','click',()=>closePointOverlay(pointStoryOverlay));safeOn('pointStoryScrollHint','click',()=>{const atBottom=pointStoryScroll.scrollTop+pointStoryScroll.clientHeight>=pointStoryScroll.scrollHeight-10;pointStoryScroll.scrollTo({top:atBottom?0:pointStoryScroll.scrollHeight,behavior:'smooth'});});
 safeOn('closeDrawer','click',closeDrawer);
 safeOn('geoAction','click',locateUser);
-safeOn('closePointSheet','click',(e)=>{e.stopPropagation();closeSheet();});
 safeOn('sheetToggle','click',(e)=>{e.stopPropagation();toggleSheet();});
 safeOn('sheetPeek','click',openSheet);
 pointSheet.addEventListener('click',e=>{ if(pointSheet.classList.contains('closed')) openSheet(); });
+safeOn('mapRouteStart','click',()=>{selectPoint(route().points[0].id);closeSheet();fitSelectedRouteBounds();});
 safeOn('mapBack','click',()=>changePoint(-1));
 safeOn('nextRoute','click',()=>changePoint(1));
 drawer.addEventListener('click',e=>{if(e.target===drawer)closeDrawer()});
@@ -1359,7 +1363,17 @@ window.addEventListener("resize",()=>{if(!yandexScreen.hidden)resizeMapSoon();})
 
 // Match the logo to the curtain edge after object-fit:cover and bottom cropping.
 function fitCurtainLogo(){
- // The new header sits on sky; its sizing follows the actual app width in CSS.
+ const screen=$('introScreen'),bg=screen?.querySelector('.intro-bg'),header=screen?.querySelector('.intro-topbar');
+ if(!header||screen.hidden||!bg.naturalWidth)return;
+ const w=screen.clientWidth,h=screen.clientHeight,scale=Math.max(w/bg.naturalWidth,h/bg.naturalHeight);
+ const cropX=Math.max(0,bg.naturalWidth*scale-w)*.67,cropY=Math.max(0,bg.naturalHeight*scale-h);
+ const sourceY=(cropY+header.offsetTop)/scale;
+ // Conservative curtain boundary in the approved 941x1672 illustration.
+ const edge=[[0,582],[20,590],[40,597],[60,609],[80,615],[100,640],[120,683],[160,733],[220,799],[300,813],[500,860],[900,910],[1672,940]];
+ let sourceX=edge.at(-1)[1];
+ for(let i=1;i<edge.length;i++)if(sourceY<=edge[i][0]){const a=edge[i-1],b=edge[i];sourceX=a[1]+(b[1]-a[1])*(sourceY-a[0])/(b[0]-a[0]);break;}
+ const skyRight=sourceX*scale-cropX-10,available=Math.min(w-14-44-20,skyRight)-14;
+ header.style.setProperty('--brand-h',Math.floor(Math.max(14,Math.min(34,(available-10)/9.502)))+'px');
 }
 window.addEventListener('resize',fitCurtainLogo,{passive:true});
 window.addEventListener('load',fitCurtainLogo);
@@ -1485,18 +1499,25 @@ function takePhotoEffect(frame){
 function fitIntroComposition(){
  const screen=$('introScreen'),hero=screen?.querySelector('.hero'),copy=screen?.querySelector('.intro-copy');
  if(!hero||!copy||screen.hidden)return;
+ const bg=screen.querySelector('.intro-bg'),header=screen.querySelector('.intro-topbar');
+ const scale=Math.max(screen.clientWidth/bg.naturalWidth,screen.clientHeight/bg.naturalHeight)||1;
+ const cropY=Math.max(0,bg.naturalHeight*scale-screen.clientHeight);
+ const gateTop=720*scale-cropY;
  const heading=copy.querySelector('h1'),width=copy.clientWidth;
  if(heading){
-  const preferred=screen.clientHeight<650?36:screen.clientWidth<=347?38:46;
+  const preferred=screen.clientHeight<650?42:screen.clientWidth<=347?45:53;
   heading.style.setProperty('font-size',preferred+'px','important');
   const largest=Math.max(...[...heading.children].map(line=>line.scrollWidth));
   if(largest>width)heading.style.setProperty('font-size',Math.max(28,Math.floor(preferred*width/largest))+'px','important');
  }
+ const normalTop=screen.clientWidth>=443?Math.min(132,screen.clientHeight*.14):Math.min(155,screen.clientHeight*.17);
+ const minTop=header.offsetTop+header.offsetHeight+26;
+ copy.style.setProperty('top',Math.max(minTop,Math.min(normalTop,gateTop-copy.offsetHeight-20))+'px','important');
  // Keep the complete man-and-cat cutout inside its own column.
  hero.style.removeProperty('height');
  const top=copy.getBoundingClientRect().bottom-screen.getBoundingClientRect().top;
  hero.style.setProperty('max-height',Math.max(60,Math.min(screen.clientHeight*.48,screen.clientHeight-20-top-14))+'px','important');
- const atmosphere=screen.querySelector('.hero-atmosphere');if(atmosphere)atmosphere.style.height=hero.getBoundingClientRect().height+'px';
+
 
 }
 window.addEventListener('resize',()=>requestAnimationFrame(fitIntroComposition));
@@ -1545,7 +1566,7 @@ routeDetailModal.addEventListener('click',event=>{
 castPhotoDialog.querySelector('button').addEventListener('click',()=>castPhotoDialog.close());
 castPhotoDialog.addEventListener('click',event=>{if(event.target===castPhotoDialog)castPhotoDialog.close()});
 castPhotoDialog.addEventListener('close',()=>castPhotoTrigger?.focus());
-document.querySelectorAll('[data-project-instruction]').forEach(button=>button.addEventListener('click',event=>{event.preventDefault();closePrologueMenu();closeDrawer();guideStep=0;guideColombinaSeen=false;renderGuideStep();openContentModal(walkGuideModal)}));
+document.querySelectorAll('[data-project-instruction]').forEach(button=>button.addEventListener('click',event=>{event.preventDefault();closePrologueMenu();closeDrawer();guideStep=0;renderGuideStep();openContentModal(walkGuideModal)}));
 // Escape closes the foreground photo only; keep the underlying route page open.
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&castPhotoDialog.open)event.stopImmediatePropagation()},true);
 
@@ -1579,7 +1600,7 @@ document.getElementById('alignmentPreviewToggle')?.addEventListener('change',eve
 let projectFitScheduled=false;
 function fitProjectFloats(){
  projectFitScheduled=false;
- document.querySelectorAll('.project-story-v44 .project-story-scene').forEach(scene=>{
+ document.querySelectorAll('.project-story-v44 .project-story-scene:not(.project-cat-scene)').forEach(scene=>{
   if(!scene.getClientRects().length)return;
   const wrap=scene.querySelector('.project-figure-wrap'),text=scene.querySelector('p');if(!wrap||!text)return;
   wrap.style.setProperty('--project-float-height','0px');
@@ -1592,7 +1613,7 @@ function fitProjectFloats(){
   wrap.style.setProperty('--project-float-height',reservedHeight+'px');
  });
 }
-function scheduleProjectFit(){if(!projectFitScheduled){projectFitScheduled=true;requestAnimationFrame(fitProjectFloats)}}
+function scheduleProjectFit(){requestAnimationFrame(fitProjectCats);if(!projectFitScheduled){projectFitScheduled=true;requestAnimationFrame(fitProjectFloats)}}
 new MutationObserver(scheduleProjectFit).observe(document.body,{subtree:true,attributes:true,attributeFilter:['hidden','class','data-heading'],childList:true});
 window.addEventListener('resize',scheduleProjectFit,{passive:true});
 document.fonts.addEventListener('loadingdone',scheduleProjectFit);scheduleProjectFit();
@@ -1602,8 +1623,10 @@ window.addEventListener('resize',()=>{if(pointStoryOverlay?.classList.contains('
 function revealGuidePanel(section){
  const root=walkGuideModal.querySelector('.walk-guide-scroll'),panel=section.querySelector('.walk-step-panel'),copy=panel?.querySelector('.walk-step-copy');if(!root||!copy)return;
  const paragraphs=[...panel.querySelectorAll('.walk-step-copy p')];if(!paragraphs.length)return;const box=root.getBoundingClientRect(),heading=section.querySelector('.walk-step-trigger').getBoundingClientRect(),first=paragraphs[0].getBoundingClientRect(),last=paragraphs.at(-1).getBoundingClientRect(),text={top:first.top,bottom:last.bottom};
- const end=text.bottom-box.top+root.scrollTop+18,start=heading.top-box.top+root.scrollTop-12;
- const top=end-start<=root.clientHeight?Math.max(0,Math.min(start,end-root.clientHeight)):Math.max(0,text.top-box.top+root.scrollTop-12);
+ const cat=guideStep===3?walkGuideModal.querySelector('.guide-kept-cat'):null;
+ const bottom=cat&&!cat.hidden?cat.getBoundingClientRect().bottom:text.bottom;
+ const end=bottom-box.top+root.scrollTop+8,start=heading.top-box.top+root.scrollTop-8;
+ const top=Math.max(0,end-root.clientHeight);
  root.scrollTo({top,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 }
 
@@ -1611,16 +1634,83 @@ function revealGuidePanel(section){
 // https://codepen.io/v777999/pen/jOWQdbb
 // https://codepen.io/v777999/pen/JjaGZav
 
-// v67 — local illustration variants; no external image dependency.
-const introBackgroundToggle=$('introBackgroundToggle');
-const introBackgroundSources={clear:'./assets/intro-palace-clear.png',blur:'./assets/intro-palace-blur.png'};
-function setIntroBackground(value){
- const mode=value==='blur'?'blur':'clear';
- $('introScreen').dataset.background=mode;
- $('introScreen').querySelector('.intro-bg').src=introBackgroundSources[mode];
- if(introBackgroundToggle)introBackgroundToggle.value=mode;
- try{localStorage.setItem('theatre-intro-background',mode)}catch{}
+// v72 — one approved home illustration; ignore old saved blur preferences.
+$('introScreen').querySelector('.intro-bg').src='./assets/intro-palace-soft.png';
+$('introScreen').dataset.background='approved';
+try{localStorage.removeItem('theatre-intro-background')}catch{}
+
+// v73: the curtain reaches the paragraph baseline; only its real footprint wraps text.
+function fitProjectCats(){
+ document.querySelectorAll('.project-cat-scene').forEach(scene=>{
+  if(!scene.offsetWidth)return;
+  const wrap=scene.querySelector('.project-figure-wrap'),p=scene.querySelector('p'),img=wrap.querySelector('img');
+  const key=scene.clientWidth+'|'+getComputedStyle(p).font+'|'+p.textContent;
+  if(scene._catFitKey===key)return;scene._catFitKey=key;
+  const preferred=scene.clientWidth<280?100:115;
+  let best=null;
+  // Small width adjustments avoid an extra empty line caused by discrete word wraps.
+  for(let width=preferred;width>=84;width-=4){
+   const imageHeight=width*2;
+   wrap.style.setProperty('width',width+'px','important');img.style.setProperty('width',width+'px','important');
+   wrap.style.setProperty('--cat-height',imageHeight+'px');wrap.style.setProperty('height','0px','important');
+   let lo=imageHeight,hi=Math.max(imageHeight,p.offsetHeight+imageHeight*2);
+   for(let i=0;i<12;i++){
+    const mid=(lo+hi)/2;wrap.style.setProperty('height',mid+'px','important');
+    if(p.offsetHeight>mid+.5)lo=mid;else hi=mid;
+   }
+   const height=Math.ceil(hi);wrap.style.setProperty('height',height+'px','important');
+   const gap=height-p.offsetHeight;
+   if(!best||gap<best.gap)best={width,height,gap};
+   if(gap<18)break;
+  }
+  wrap.style.setProperty('width',best.width+'px','important');img.style.setProperty('width',best.width+'px','important');
+  wrap.style.setProperty('--cat-height',best.width*2+'px');wrap.style.setProperty('height',best.height+'px','important');
+ });
 }
-let savedIntroBackground='clear';try{savedIntroBackground=localStorage.getItem('theatre-intro-background')||'clear'}catch{}
-setIntroBackground(savedIntroBackground);
-introBackgroundToggle?.addEventListener('change',e=>setIntroBackground(e.target.value));
+// Address wrapping changes on small screens; expanded stories must start below it.
+function fitMapPanelSpace(){
+ const context=$('mapContext'),screen=$('yandexScreen');if(screen.hidden||!context.offsetHeight)return;
+ screen.style.setProperty('--map-content-top',Math.ceil(context.offsetTop+context.offsetHeight+8)+'px');
+}
+new ResizeObserver(fitMapPanelSpace).observe($('mapContext'));
+window.addEventListener('resize',fitMapPanelSpace,{passive:true});
+
+// v74: drag down from the header, or from content already scrolled to its top.
+(()=>{
+ let gesture=null,suppressClickUntil=0;
+ const content=pointSheet.querySelector('.point-content');
+ const interactive='button,a,input,audio,select,textarea';
+ function start(x,y,target){
+  if(pointSheet.classList.contains('closed')||target.closest(interactive)&&!target.closest('#sheetToggle'))return;
+  if(target.closest('.point-content')&&content.scrollTop>1)return;
+  gesture={x,y,dy:0,dragging:false};
+ }
+ function move(x,y,event){
+  if(!gesture)return;
+  const dy=y-gesture.y,dx=x-gesture.x;
+  if(!gesture.dragging&&(Math.abs(dx)>15||dy< -10)){gesture=null;return}
+  if(dy>2&&Math.abs(dy)>Math.abs(dx)*1.2){
+   gesture.dragging=true;gesture.dy=dy;
+   if(event.cancelable)event.preventDefault();
+   pointSheet.classList.add('is-dragging');
+   pointSheet.style.setProperty('--sheet-drag',Math.min(dy,260)+'px');
+  }
+ }
+ function end(){
+  if(!gesture)return;
+  const g=gesture;gesture=null;
+  pointSheet.classList.remove('is-dragging');pointSheet.style.removeProperty('--sheet-drag');
+  if(g.dragging){suppressClickUntil=Date.now()+400;if(g.dy>60)closeSheet()}
+ }
+ pointSheet.addEventListener('touchstart',e=>{if(e.touches.length===1)start(e.touches[0].clientX,e.touches[0].clientY,e.target)},{passive:true});
+ pointSheet.addEventListener('touchmove',e=>{if(e.touches.length===1)move(e.touches[0].clientX,e.touches[0].clientY,e)},{passive:false});
+ pointSheet.addEventListener('touchend',end);pointSheet.addEventListener('touchcancel',()=>{gesture=null;pointSheet.classList.remove('is-dragging');pointSheet.style.removeProperty('--sheet-drag')});
+ pointSheet.querySelector('.sheet-topbar').addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'){start(e.clientX,e.clientY,e.target);if(gesture)(e.target.closest('#sheetToggle')||e.currentTarget).setPointerCapture(e.pointerId)}});
+ pointSheet.addEventListener('pointermove',e=>{if(e.pointerType==='mouse')move(e.clientX,e.clientY,e)});
+ pointSheet.addEventListener('pointerup',e=>{if(e.pointerType==='mouse')end()});
+ pointSheet.addEventListener('click',e=>{if(Date.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation()}},true);
+})();
+
+// Refine visual brand fitting after image decode and mobile browser chrome changes.
+$('introScreen').querySelectorAll('.intro-topbar img,.intro-bg').forEach(img=>img.addEventListener('load',fitCurtainLogo));
+window.visualViewport?.addEventListener('resize',()=>{fitCurtainLogo();fitIntroComposition()},{passive:true});

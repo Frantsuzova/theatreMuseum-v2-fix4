@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta name="app-build" content="watercolor-v70" />
+  <meta name="app-build" content="watercolor-v76" />
   <meta name="yandex-maps-api-key" content="" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#741b2a" />
+  <meta name="theme-color" content="#962e2a" />
   <title>Город музыки и театров</title>
-  <link rel="manifest" href="./manifest.webmanifest?v=watercolor-70" />
-  <link rel="stylesheet" href="./styles.css?v=watercolor-70" />
-  <link rel="stylesheet" href="./routes.css?v=watercolor-70" />
+  <link rel="manifest" href="./manifest.webmanifest?v=watercolor-76" />
+  <link rel="stylesheet" href="./styles.css?v=watercolor-76" />
+  <link rel="stylesheet" href="./routes.css?v=watercolor-76" />
 </head>
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs><filter id="museumLogoTint" color-interpolation-filters="sRGB"><feFlood flood-color="#ebca79"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs><filter id="museumLogoTint" color-interpolation-filters="sRGB"><feFlood flood-color="#352c29"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs></svg>
   <main class="app" id="app">
     <section class="screen intro-screen" id="introScreen">
-      <img class="intro-bg" src="./assets/intro-palace-clear.png" alt="" />
+      <img class="intro-bg" src="./assets/intro-palace-soft.png" alt="" />
       <div class="intro-bg-fog"></div>
       <div class="film-overlay"></div>
       <div class="curtain"></div>
-      <div class="intro-topbar"><div class="intro-sponsor" aria-label="ВТБ — генеральный спонсор"><img src="./assets/vtb-general-sponsor.png" alt="ВТБ — генеральный спонсор" /></div>
-      <span class="museum-logo-halo"><img class="logo museum-logo" src="./assets/LOGO2.png" alt="Музей театрального и музыкального искусства" /></span>
-      <button class="prologue-burger intro-burger" id="openIntroMenu" type="button" aria-label="Открыть меню"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h14"/></svg></button>
+      <div class="intro-topbar">
+        <span class="museum-logo-halo"><img class="logo museum-logo" src="./assets/brand-museum.png" alt="Музей театрального и музыкального искусства" /></span>
+        <div class="intro-sponsor" aria-label="ВТБ"><svg viewBox="11 26 725 258" aria-hidden="true"><image href="./assets/brand-vtb.png" width="762" height="314" /></svg></div>
+        <button class="prologue-burger intro-burger" id="openIntroMenu" type="button" aria-label="Открыть меню"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h14"/></svg></button>
       </div>
       <div class="geometry" aria-hidden="true">
         <div class="axis"></div>
@@ -35,8 +36,8 @@
         <h1><span>Город</span><span>музыки</span><span>и театров</span></h1>
         
       </header>
-      <div class="hero-atmosphere" aria-hidden="true"></div><img class="hero" src="./assets/intro-man-cat.png" alt="Мужчина с тростью и музейный кот" />
-      <footer class="intro-bottom"><div class="intro-utility-row"><label class="type-preview-control bg-preview-control"><span class="visually-hidden">Вариант фона</span><select id="introBackgroundToggle" aria-label="Вариант фона"><option value="clear">Без блюра</option><option value="blur">С блюром</option></select></label><button class="btn route-return" id="returnToRoute" type="button" hidden><span>Вернуться к маршруту</span><b>→</b></button></div>
+      <img class="hero" src="./assets/intro-man-cat.png" alt="Мужчина с тростью и музейный кот" />
+      <footer class="intro-bottom"><div class="intro-utility-row"><button class="btn route-return" id="returnToRoute" type="button" hidden><span>Вернуться к маршруту</span><b>→</b></button></div>
         
         <button class="btn primary guide-intro-button" id="chooseRoute" type="button"><span class="button-label">Инструкция</span></button>
         <button class="btn secondary routes-intro-button" id="goMapFromIntro" type="button"><span>Маршруты</span><span aria-hidden="true">→</span></button>
@@ -44,7 +45,7 @@
       </footer></div>
     </section>
 
-    <section class="screen route-select-screen" id="routesScreen" hidden>
+    <section class="screen route-select-screen" id="routesScreen" aria-labelledby="routesScreenTitle" hidden>
       <img class="route-select-bg" src="./assets/route-forward.png" alt="" />
       <div class="route-select-shade"></div>
       <div class="film-overlay route-select-film"></div>
@@ -53,27 +54,27 @@
         <button class="round route-select-back" id="backToPrologue" aria-label="Назад" type="button">←</button>
         <div class="route-select-head-copy">
           <div class="kicker">Город музыки и театров</div>
-          <h2>Маршруты</h2>
+          <h2 class="sr-heading" id="routesScreenTitle">Маршруты</h2>
         </div>
       </header>
       <main class="route-select-main">
         <p class="route-select-intro">Четыре прогулки — четыре истории Петербурга.</p>
         <div class="route-choice-grid" id="routeChoiceList">
           <button class="route-choice" data-route="1" type="button">
-            <span class="route-choice-badge c1">1</span>
-            <span class="route-choice-text"><strong>Маршрут 01</strong><em>Римский-Корсаков — Шаляпин</em><span class="route-choice-hook">Узнать талант. Услышать друг друга.</span><span class="route-choice-invite" aria-hidden="true">Открыть <span>↗</span></span></span>
+            <span class="route-choice-badge c1">01</span>
+            <span class="route-choice-text"><strong>Маршрут 01</strong><em>Римский-Корсаков — Шаляпин</em><span class="route-choice-hook">Узнать талант. Услышать друг друга.</span></span>
           </button>
           <button class="route-choice" data-route="2" type="button">
-            <span class="route-choice-badge c2">2</span>
-            <span class="route-choice-text"><strong>Маршрут 02</strong><em>Прогулка<br>с Дягилевым</em><span class="route-choice-hook">Риск, который меняет театр.</span><span class="route-choice-invite" aria-hidden="true">Открыть <span>↗</span></span></span>
+            <span class="route-choice-badge c2">02</span>
+            <span class="route-choice-text"><strong>Маршрут 02</strong><em>Прогулка<br>с Дягилевым</em><span class="route-choice-hook">Риск, который меняет театр.</span></span>
           </button>
           <button class="route-choice" data-route="3" type="button">
-            <span class="route-choice-badge c3">3</span>
-            <span class="route-choice-text"><strong>Маршрут 03</strong><em>Фонтанный дом</em><span class="route-choice-hook">Память дома. Голоса музыкального салона.</span><span class="route-choice-invite" aria-hidden="true">Открыть <span>↗</span></span></span>
+            <span class="route-choice-badge c3">03</span>
+            <span class="route-choice-text"><strong>Маршрут 03</strong><em>Фонтанный дом</em><span class="route-choice-hook">Память дома. Голоса музыкального салона.</span></span>
           </button>
           <button class="route-choice" data-route="4" type="button">
-            <span class="route-choice-badge c4">4</span>
-            <span class="route-choice-text"><strong>Маршрут 04</strong><em>Репин — Серов</em><span class="route-choice-hook">Два поколения. Новый взгляд.</span><span class="route-choice-invite" aria-hidden="true">Открыть <span>↗</span></span></span>
+            <span class="route-choice-badge c4">04</span>
+            <span class="route-choice-text"><strong>Маршрут 04</strong><em>Репин — Серов</em><span class="route-choice-hook">Два поколения. Новый взгляд.</span></span>
           </button>
         </div>
 
@@ -91,7 +92,7 @@
     <section class="screen yandex-screen sheet-closed" id="yandexScreen" hidden>
       <div class="map-theatre-bg"></div>
       <header class="map-head">
-        <button class="map-logo-button" id="mapLogoHome" type="button" aria-label="На главную"><img style="filter:url(#museumLogoTint)!important" src="./assets/museum-logo-gold.png" alt="" /></button>
+        <button class="map-logo-button" id="mapLogoHome" type="button" aria-label="На главную"><svg viewBox="0 0 500 306" aria-hidden="true"><image href="./assets/brand-museum.png" width="2048" height="306" style="filter:url(#museumLogoTint)!important" /></svg></button>
         <div class="map-title-block">
           <div>Город музыки и театров</div>
           <h2>Карта маршрута</h2>
@@ -106,16 +107,16 @@
         <button class="geo-action" id="geoAction" type="button" aria-label="Показать мою геолокацию"><span>⌖</span></button>
         <div class="map-credit-mask"></div>
       </div>
-      <div class="map-context" id="mapContext"><button type="button" class="map-context-route" id="contextRouteLink" aria-label="Открыть информацию о выбранном маршруте"><span class="map-context-route-title"><small>Ваш маршрут</small><b id="contextRoute">01</b></span><span class="map-context-point" id="pointCounter">Точка 1 из 2</span></button><span class="map-context-address"><small>Адрес точки</small><strong id="contextAddress">Загородный проспект, 28</strong></span></div>
+      <div class="map-context" id="mapContext"><button type="button" class="map-context-route" id="contextRouteLink" aria-label="Открыть информацию о выбранном маршруте"><span class="map-context-route-title"><small>Ваш маршрут</small><b id="contextRoute">01</b></span><span class="map-context-point" id="pointCounter">Точка 1 из 2</span></button><button class="map-route-start" id="mapRouteStart" type="button">К началу маршрута</button><span class="map-context-address"><small>Адрес точки</small><strong id="contextAddress">Загородный проспект, 28</strong></span></div>
       <section class="point-sheet closed" id="pointSheet">
         <div class="sheet-topbar">
-          <button class="sheet-toggle" id="sheetToggle" type="button" aria-label="Развернуть карточку"><span class="handle"></span></button>
+          <button class="sheet-toggle" id="sheetToggle" type="button" aria-label="Развернуть карточку"><svg class="sheet-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 15 6-6 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="sheet-peek" id="sheetPeek">
-            <div class="peek-meta"><span class="peek-route-copy">Откройте историю места</span></div>
+            <div class="peek-meta"><span class="peek-route-copy"><small>У этого места есть голос</small><strong>Слушать и читать</strong></span></div>
             <span class="peek-pin route-c1" id="peekPointPin"><span id="peekPointNum">1</span></span>
-            <span class="peek-open">↑ открыть</span>
+            
           </div>
-          <button class="sheet-close" id="closePointSheet" type="button" aria-label="Свернуть карточку">×</button>
+          
         </div>
         <div class="point-content">
           <div class="point-sheet-top">
@@ -135,7 +136,7 @@
             <audio id="routeAudio" preload="metadata" src="./assets/1.mp3"></audio>
           </div>
           <div class="point-nav">
-            <button class="sheet-nav" id="mapBack" type="button">← <span>Назад</span></button>
+            <button class="sheet-nav" id="mapBack" type="button">← <span>Пред. точка</span></button>
             <div class="nav-icon-group">
               <button class="sheet-nav icon-nav icon-nav-rich" id="goHome" type="button" aria-label="Вернуться на главную">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.8 10.9 12 4l8.2 6.9v8.35a.75.75 0 0 1-.75.75h-4.7v-5.8h-5.5V20h-4.7a.75.75 0 0 1-.75-.75V10.9Zm-1.45-.3a1 1 0 0 0 1.3 1.52L12 5.1l8.35 7.02a1 1 0 1 0 1.3-1.52l-9-7.56a1 1 0 0 0-1.3 0l-9 7.56Z" fill="currentColor"/></svg>
@@ -144,14 +145,14 @@
                 <svg class="info-glyph-svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="6.5" r="1.3" fill="currentColor"/><path d="M10 10.5h2v7m-2 0h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
               </button>
             </div>
-            <button class="sheet-nav next" id="nextRoute" type="button"><span>Вперед</span> →</button>
+            <button class="sheet-nav next" id="nextRoute" type="button"><span>След. точка</span> →</button>
           </div>
         </div>
       </section>
       <aside class="route-drawer" id="routeDrawer" hidden>
         <div class="drawer-panel-wrap">
           <div class="drawer-head">
-            <div><div class="drawer-kicker">Маршрут и проект</div><h3>Навигация</h3></div>
+            <div><div class="drawer-kicker">Маршрут и проект</div><h3 class="sr-heading">Меню маршрута</h3></div>
             <button class="drawer-close" id="closeDrawer" type="button" aria-label="Закрыть">×</button>
           </div>
           <button class="menu-route-select" id="drawerGoRouteSelect" type="button"><span>Вернуться к выбору маршрута</span><b>→</b></button>
@@ -174,15 +175,15 @@
               <div class="drawer-route-list" id="drawerRouteList"></div>
             </div>
             <div class="drawer-panel project-with-actor" id="drawerPanelProject" hidden>
-              <div class="drawer-text-block"><h4>О проекте</h4></div>
+              <div class="drawer-text-block"><h4 class="sr-heading">О проекте</h4></div>
               <div class="project-story project-story-v44">
 <p class="project-story-lead">Дорогой друг!</p>
 <p>Вы приобрели единый билет в филиалы Санкт-Петербургского музея театрального и музыкального искусства — впереди большое путешествие!</p>
-<div class="project-story-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/cast-kolombina-curtain-right.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. Здесь преломляются пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
+<div class="project-story-scene project-cat-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/project-cat.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. Здесь преломляются пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
 <p>Вас ждут четыре театрализованных променада в компании выдающихся персон: Фёдора Шаляпина, Николая Римского-Корсакова, Сергея Дягилева, Василия Самойлова, — а также их друзей, соратников и завистников. Каждая прогулка ближе познакомит с героями, память о которых хранит Музей, и откроет новые главы из истории его филиалов.</p>
 <p>Как бы Вам ни хотелось поскорее начать путешествие, просим сначала <a class="project-instruction-link" href="#instruction" data-project-instruction>ознакомиться с краткой инструкцией</a> — скорее всего, там найдутся ответы на все вопросы.</p>
 <p class="project-story-end">Итак, занавес открывается!</p>
-<footer class="project-sponsor"><p>Генеральный спонсор проекта — банк ВТБ</p><img src="./assets/vtb-general-sponsor.png" alt="ВТБ — генеральный спонсор"></footer>
+<footer class="project-sponsor"><p>Генеральный спонсор проекта — банк ВТБ</p><img src="./assets/brand-vtb.png" alt="ВТБ — генеральный спонсор"></footer>
 </div>
             </div>
             <div class="drawer-panel" id="drawerPanelPoster" hidden>
@@ -235,12 +236,12 @@
       </aside>
     </section>
 
-    <aside class="prologue-menu-drawer" id="prologueMenuDrawer" hidden>
+    <aside class="prologue-menu-drawer" id="prologueMenuDrawer" aria-labelledby="appMenuTitle" hidden>
       <div class="prologue-menu-panel-wrap">
         <div class="prologue-menu-head">
           <div>
             <div class="drawer-kicker">Город музыки и театров</div>
-            <h3>Меню приложения</h3>
+            <h3 class="sr-heading" id="appMenuTitle">Меню приложения</h3>
           </div>
           <button class="drawer-close" id="closePrologueMenu" type="button" aria-label="Закрыть">×</button>
         </div>
@@ -254,15 +255,15 @@
 
         <div class="prologue-menu-scroll" id="prologueMenuScroll">
           <section class="prologue-menu-panel active project-with-actor" id="prologueMenuProject">
-            <div class="menu-section-label menu-section-title">О проекте</div>
+            <h4 class="sr-heading">О проекте</h4>
             <div class="project-story project-story-v44">
 <p class="project-story-lead">Дорогой друг!</p>
 <p>Вы приобрели единый билет в филиалы Санкт-Петербургского музея театрального и музыкального искусства — впереди большое путешествие!</p>
-<div class="project-story-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/cast-kolombina-curtain-right.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. Здесь преломляются пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
+<div class="project-story-scene project-cat-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/project-cat.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. Здесь преломляются пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
 <p>Вас ждут четыре театрализованных променада в компании выдающихся персон: Фёдора Шаляпина, Николая Римского-Корсакова, Сергея Дягилева, Василия Самойлова, — а также их друзей, соратников и завистников. Каждая прогулка ближе познакомит с героями, память о которых хранит Музей, и откроет новые главы из истории его филиалов.</p>
 <p>Как бы Вам ни хотелось поскорее начать путешествие, просим сначала <a class="project-instruction-link" href="#instruction" data-project-instruction>ознакомиться с краткой инструкцией</a> — скорее всего, там найдутся ответы на все вопросы.</p>
 <p class="project-story-end">Итак, занавес открывается!</p>
-<footer class="project-sponsor"><p>Генеральный спонсор проекта — банк ВТБ</p><img src="./assets/vtb-general-sponsor.png" alt="ВТБ — генеральный спонсор"></footer>
+<footer class="project-sponsor"><p>Генеральный спонсор проекта — банк ВТБ</p><img src="./assets/brand-vtb.png" alt="ВТБ — генеральный спонсор"></footer>
 </div>
           </section>
 
@@ -407,7 +408,7 @@
       </div>
     </aside>
   </main>
-    <aside class="content-modal walk-guide-modal" id="walkGuideModal" hidden aria-hidden="true"><div class="content-modal-sheet"><header class="content-modal-head"><div><div class="drawer-kicker">Город музыки и театров</div><h3>Как устроена прогулка</h3></div><button class="drawer-close" id="closeWalkGuide" type="button" aria-label="Закрыть">×</button></header><div class="content-modal-scroll walk-guide-scroll"><section class="walk-step is-open" data-walk-section="0"><button class="walk-step-trigger" type="button" data-walk-step="0" aria-expanded="true" aria-controls="walkStepPanel0"><span class="walk-step-number">01</span><span class="walk-step-title">Выберите маршрут</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel0" ><div class="walk-step-copy"><p>Четыре прогулки рассказывают разные истории города. Откройте описание, посмотрите точку старта и выберите свою линию.</p></div><img class="walk-step-figure" src="./assets/cast-kolombina.png" alt="" aria-hidden="true"></div></section><section class="walk-step " data-walk-section="1"><button class="walk-step-trigger" type="button" data-walk-step="1" aria-expanded="false" aria-controls="walkStepPanel1"><span class="walk-step-number">02</span><span class="walk-step-title">Идите от точки к точке</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel1" hidden><div class="walk-step-copy"><p>Карта покажет путь и адрес. Можно начать с любой точки и возвращаться к уже просмотренным местам.</p></div><img class="walk-step-figure" src="./assets/cast-arlekin-curtain-left.png" alt="" aria-hidden="true"></div></section><section class="walk-step " data-walk-section="2"><button class="walk-step-trigger" type="button" data-walk-step="2" aria-expanded="false" aria-controls="walkStepPanel2"><span class="walk-step-number">03</span><span class="walk-step-title">Слушайте и читайте</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel2" hidden><div class="walk-step-copy"><p>У каждой остановки есть короткий рассказ и аудио. Значок «i» откроет историю места, фотографии и контекст.</p></div><img class="walk-step-figure" src="./assets/cast-arlekin-right.png" alt="" aria-hidden="true"></div></section><section class="walk-step " data-walk-section="3"><button class="walk-step-trigger" type="button" data-walk-step="3" aria-expanded="false" aria-controls="walkStepPanel3"><span class="walk-step-number">04</span><span class="walk-step-title">Следуйте за историями в своём темпе</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel3" hidden><div class="walk-step-copy"><p>Прогулку можно прервать и продолжить позже: выбранный маршрут, точка и ваш прогресс сохранятся между посещениями.</p></div><img class="walk-step-figure" src="./assets/cast-kolombina-down.png" alt="" aria-hidden="true"></div></section></div><footer class="content-modal-actions"><img class="guide-footer-colombina" src="./assets/cast-kolombina-down.png" alt="" aria-hidden="true" hidden><button class="btn primary" id="guideRouteSelect" type="button">Маршруты</button></footer></div></aside>
+    <aside class="content-modal walk-guide-modal" id="walkGuideModal" aria-labelledby="instructionTitle" hidden aria-hidden="true"><div class="content-modal-sheet"><header class="content-modal-head"><div><div class="drawer-kicker">Город музыки и театров</div><h3 class="sr-heading" id="instructionTitle">Инструкция</h3></div><button class="drawer-close" id="closeWalkGuide" type="button" aria-label="Закрыть">×</button></header><div class="content-modal-scroll walk-guide-scroll"><section class="walk-step is-open" data-walk-section="0"><button class="walk-step-trigger" type="button" data-walk-step="0" aria-expanded="true" aria-controls="walkStepPanel0"><span class="walk-step-number">01</span><span class="walk-step-title">Выберите маршрут</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel0" ><div class="walk-step-copy"><p>Четыре прогулки рассказывают разные истории города. Откройте описание, посмотрите точку старта и выберите свою линию.</p></div></div></section><section class="walk-step " data-walk-section="1"><button class="walk-step-trigger" type="button" data-walk-step="1" aria-expanded="false" aria-controls="walkStepPanel1"><span class="walk-step-number">02</span><span class="walk-step-title">Идите от точки к точке</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel1" hidden><div class="walk-step-copy"><p>Карта покажет путь и адрес. Можно начать с любой точки и возвращаться к уже просмотренным местам.</p></div></div></section><section class="walk-step " data-walk-section="2"><button class="walk-step-trigger" type="button" data-walk-step="2" aria-expanded="false" aria-controls="walkStepPanel2"><span class="walk-step-number">03</span><span class="walk-step-title">Слушайте и читайте</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel2" hidden><div class="walk-step-copy"><p>У каждой остановки есть короткий рассказ и аудио. Значок «i» откроет историю места, фотографии и контекст.</p></div></div></section><section class="walk-step " data-walk-section="3"><button class="walk-step-trigger" type="button" data-walk-step="3" aria-expanded="false" aria-controls="walkStepPanel3"><span class="walk-step-number">04</span><span class="walk-step-title">Следуйте за историями в своём темпе</span><span class="walk-step-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="walk-step-panel" id="walkStepPanel3" hidden><div class="walk-step-copy"><p>Прогулку можно прервать и продолжить позже: выбранный маршрут, точка и ваш прогресс сохранятся между посещениями.</p></div></div></section><img class="guide-kept-cat" src="./assets/instruction-cat.png" alt="Музейный кот" hidden></div><footer class="content-modal-actions"><button class="btn primary" id="guideRouteSelect" type="button">Маршруты</button></footer></div></aside>
 
     <aside class="content-modal route-detail-modal" id="routeDetailModal" hidden aria-hidden="true">
       <div class="content-modal-sheet">
@@ -427,6 +428,6 @@
       </div>
     </aside>
 <dialog class="cast-photo-dialog" id="castPhotoDialog" aria-label="Архивная фотография"><button class="cast-photo-close" type="button" aria-label="Закрыть фотографию">×</button><img alt=""><p></p></dialog>
-  <script src="./app.watercolor.js?v=watercolor-70"></script>
+  <script src="./app.watercolor.js?v=watercolor-76"></script>
 </body>
 </html>

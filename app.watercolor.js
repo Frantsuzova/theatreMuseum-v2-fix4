@@ -176,8 +176,8 @@ function updatePointNavState(){
  ['nextRoute','peekNext'].forEach(id=>{const button=$(id);if(button)button.disabled=p.id===r.points.length});
  const counter=$('peekCounter');if(counter)counter.textContent=`Точка ${String(p.id).padStart(2,'0')} из ${String(r.points.length).padStart(2,'0')}`;
 }
-function openSheet(){$('sheetToggle').setAttribute('aria-label','Свернуть карточку');$('sheetToggle').setAttribute('aria-expanded','true');pointSheet.classList.remove('closed');yandexScreen.classList.add('sheet-open');yandexScreen.classList.remove('sheet-closed');resizeMapSoon(); focusActiveRouteForOpenSheet(); }
-function closeSheet(){$('sheetToggle').setAttribute('aria-label','Развернуть карточку');$('sheetToggle').setAttribute('aria-expanded','false');pointSheet.classList.add('closed');yandexScreen.classList.add('sheet-closed');yandexScreen.classList.remove('sheet-open');resizeMapSoon(); focusActiveRouteForClosedSheet(); }
+function openSheet(){$('sheetToggle').setAttribute('aria-label','Свернуть карточку');$('sheetToggle').setAttribute('aria-expanded','true');$('sheetToggle').querySelector('.sheet-toggle-caption').textContent='Свернуть';pointSheet.classList.remove('closed');yandexScreen.classList.add('sheet-open');yandexScreen.classList.remove('sheet-closed');resizeMapSoon(); focusActiveRouteForOpenSheet(); }
+function closeSheet(){$('sheetToggle').setAttribute('aria-label','Развернуть карточку');$('sheetToggle').setAttribute('aria-expanded','false');$('sheetToggle').querySelector('.sheet-toggle-caption').textContent='Развернуть';pointSheet.classList.add('closed');yandexScreen.classList.add('sheet-closed');yandexScreen.classList.remove('sheet-open');resizeMapSoon(); focusActiveRouteForClosedSheet(); }
 function toggleSheet(){pointSheet.classList.contains('closed')?openSheet():closeSheet()}
 function focusActiveRouteForOpenSheet(){
  if(!ymap) return;
@@ -935,7 +935,6 @@ safeOn('geoAction','click',locateUser);
 safeOn('sheetToggle','click',(e)=>{e.stopPropagation();toggleSheet();});
 safeOn('sheetPeek','click',openSheet);
 pointSheet.addEventListener('click',e=>{ if(pointSheet.classList.contains('closed')) openSheet(); });
-safeOn('mapRouteStart','click',()=>{selectPoint(route().points[0].id,{keepSheetClosed:true});fitSelectedRouteBounds();});
 safeOn('peekPrev','click',e=>{e.stopPropagation();changePoint(-1,true)});
 safeOn('peekNext','click',e=>{e.stopPropagation();changePoint(1,true)});
 safeOn('mapBack','click',()=>changePoint(-1));
@@ -1508,6 +1507,7 @@ function fitIntroComposition(){
  const screen=$('introScreen'),hero=screen?.querySelector('.hero'),copy=screen?.querySelector('.intro-copy');
  if(!hero||!copy||screen.hidden)return;
  const bg=screen.querySelector('.intro-bg'),header=screen.querySelector('.intro-topbar');
+ if(!bg.naturalWidth||!bg.naturalHeight)return;
  const scale=Math.max(screen.clientWidth/bg.naturalWidth,screen.clientHeight/bg.naturalHeight)||1;
  const cropY=Math.max(0,bg.naturalHeight*scale-screen.clientHeight);
  const gateTop=720*scale-cropY;
@@ -1519,7 +1519,13 @@ function fitIntroComposition(){
   if(largest>width)heading.style.setProperty('font-size',Math.max(28,Math.floor(preferred*width/largest))+'px','important');
  }
  const normalTop=screen.clientWidth>=443?Math.min(132,screen.clientHeight*.14):Math.min(155,screen.clientHeight*.17);
- const minTop=header.offsetTop+header.offsetHeight+26;
+ const minTop=header.offsetTop+header.offsetHeight+14;
+ const room=gateTop-20-minTop;
+ // Width alone is insufficient: a 467px frame may have much less sky vertically.
+ if(heading&&room>=68&&copy.offsetHeight>room){
+  const current=parseFloat(getComputedStyle(heading).fontSize);
+  heading.style.setProperty('font-size',Math.max(20,Math.floor(current*room/copy.offsetHeight))+'px','important');
+ }
  copy.style.setProperty('top',Math.max(minTop,Math.min(normalTop,gateTop-copy.offsetHeight-20))+'px','important');
  // Keep the complete man-and-cat cutout inside its own column.
  hero.style.removeProperty('height');
@@ -1722,3 +1728,6 @@ window.addEventListener('resize',fitMapPanelSpace,{passive:true});
 // Refine visual brand fitting after image decode and mobile browser chrome changes.
 $('introScreen').querySelectorAll('.intro-topbar img,.intro-bg').forEach(img=>img.addEventListener('load',fitCurtainLogo));
 window.visualViewport?.addEventListener('resize',()=>{fitCurtainLogo();fitIntroComposition()},{passive:true});
+
+window.addEventListener('load',fitIntroComposition);
+$('introScreen').querySelector('.intro-bg').addEventListener('load',()=>requestAnimationFrame(fitIntroComposition));

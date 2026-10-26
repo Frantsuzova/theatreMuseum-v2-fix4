@@ -11549,8 +11549,8 @@ body>#infoGalleryFullscreen #infoGalleryFullscreenCaption{display:block!importan
 #mapContext .map-context-address{grid-column:2;grid-row:1/3;border:0!important;padding:0!important;min-width:0!important}
 #mapContext .map-context-address small{color:#962e2a!important}
 #mapContext .map-context-address strong{color:#352c29!important;font-size:13px!important;line-height:1.35!important}
-.map-route-start{grid-column:1;grid-row:2;display:block;align-self:start;width:fit-content;max-width:100%;border:1px solid #962e2a40;border-radius:14px;padding:5px 8px;background:#e8cea970;color:#962e2a;font:500 11px/1.3 var(--body-font);text-align:left;cursor:pointer}
-.map-route-start:hover{background:#e8cea9}.map-route-start:active{transform:translateY(1px)}
+
+
 #pointSheet{background:linear-gradient(150deg,#f3e4ce,#e8cea9)!important;color:#352c29!important;border-color:#bc9f7a!important;box-shadow:0 -8px 28px #352c2926!important}
 #pointSheet::before{display:none!important}
 #pointSheet .point-now,#pointSheet .point-summary,#pointSheet .point-summary span,#pointSheet .sheet-nav,#pointSheet .audio-times,#pointSheet .peek-route-copy{color:#352c29!important}
@@ -11661,9 +11661,9 @@ body.walk-wide #yandexScreen #pointSheet:not(.closed){max-height:calc(100% - var
 #introScreen .intro-topbar .intro-burger{width:var(--menu-size)!important;height:var(--menu-size)!important;min-width:var(--menu-size)!important;min-height:var(--menu-size)!important;max-height:var(--menu-size)!important;align-self:center!important}
 #introScreen .intro-topbar .intro-burger svg{width:76%!important;height:76%!important;stroke-width:1.7!important}
 #introScreen .intro-topbar .intro-burger::after{inset:calc((var(--menu-size) - 44px)/2)!important}
-#mapContext .map-route-start{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:#726154!important;font:400 11px/1.35 var(--body-font)!important;padding:4px 0 0!important;min-height:24px!important;max-width:100%!important;text-decoration:none;transform:none!important}
-#mapContext .map-route-start:hover{color:#962e2a!important;text-decoration:underline;text-underline-offset:3px}
-#mapContext .map-route-start:focus-visible{outline:1px solid #962e2a;outline-offset:3px}
+
+
+
 
 /* v77 — point browsing stays available while the story card is folded. */
 #pointSheet .compact-point-nav{display:none!important}
@@ -11675,9 +11675,20 @@ body.walk-wide #yandexScreen #pointSheet:not(.closed){max-height:calc(100% - var
 #pointSheet .compact-point-nav button:hover:not(:disabled){background:#fff8ec88}
 #pointSheet .compact-point-nav button:disabled{color:#726154;opacity:.3;cursor:default}
 #pointSheet .compact-point-nav button:focus-visible{outline:1px solid #962e2a;outline-offset:-2px}
-#mapContext .map-route-start{display:inline-flex!important;align-items:center;justify-content:center;width:fit-content!important;max-width:100%!important;min-height:28px!important;padding:4px 7px!important;border:1px solid #8a726044!important;border-radius:7px!important;background:#fff8ec55!important;color:#675047!important;box-shadow:none!important;font-size:10px!important;text-decoration:none!important}
-#mapContext .map-route-start:hover{border-color:#962e2a99!important;background:#fff8ecaa!important;color:#962e2a!important}
-#mapContext .map-route-start:active{background:#e8cea9!important}
+
+
+
 .project-reading-phrase{white-space:nowrap!important}
-#mapContext .map-route-start{font:400 10px/1.35 var(--body-font)!important;letter-spacing:0!important;white-space:nowrap!important;padding-inline:6px!important}
+
 #pointSheet.browsing-folded{transition:none!important}
+
+/* v78 — a labelled story handle, and the shared river illustration on route prose. */
+#pointSheet .sheet-toggle{flex:0 0 78px!important;width:78px!important;height:44px!important;padding:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important}
+#pointSheet .sheet-toggle-caption{display:block;color:#962e2a;font:500 10px/1.2 var(--body-font);white-space:nowrap;letter-spacing:0}
+#pointSheet .sheet-chevron{flex:0 0 22px!important;width:22px!important;height:22px!important}
+#mapContext{grid-template-rows:auto!important}
+#mapContext .map-context-address{grid-row:1!important}
+#routeDetailModal .content-modal-sheet{background:linear-gradient(180deg,rgba(255,250,238,.88),rgba(251,240,219,.91)),url('./assets/river-map-bg.png') center center/cover no-repeat!important}
+#routeDetailModal .content-modal-sheet::before,#routeDetailModal .content-modal-sheet::after{display:none!important}
+#routeDetailModal .content-modal-head,#routeDetailModal .route-detail-overview,#routeDetailModal .content-modal-scroll{background:transparent!important}
+#routeDetailModal .content-modal-actions{background:rgba(251,240,219,.96)!important}

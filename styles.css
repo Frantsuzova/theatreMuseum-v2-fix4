@@ -11527,7 +11527,7 @@ body>#infoGalleryFullscreen #infoGalleryFullscreenCaption{display:block!importan
 #introScreen .intro-content-stack .intro-copy{left:14px!important;right:12%!important}
 #introScreen .intro-copy h1{line-height:1.14!important}
 /* Float space is measured from the paragraph; image and curtain sit on its baseline. */
-#prologueMenuProject .project-story-v44 .project-cat-scene,#drawerPanelProject .project-story-v44 .project-cat-scene{border:0!important;border-bottom:1px solid #962e2a38!important}
+#prologueMenuProject .project-story-v44 .project-cat-scene,#drawerPanelProject .project-story-v44 .project-cat-scene{border:0!important;border-bottom:0!important}
 #prologueMenuProject .project-story-v44 .project-figure-wrap,#drawerPanelProject .project-story-v44 .project-figure-wrap{--cat-height:230px;width:115px!important;min-height:var(--cat-height)!important;margin:0 0 0 9px!important;shape-outside:inset(calc(100% - var(--cat-height)) 0 0 0)!important;shape-margin:3px!important}
 #prologueMenuProject .project-story-v44 .project-figure-wrap img,#drawerPanelProject .project-story-v44 .project-figure-wrap img{position:absolute!important;inset:auto 0 0 auto!important;width:115px!important;height:var(--cat-height)!important;max-width:none!important;object-position:right bottom!important}
 #prologueMenuProject .project-cat-scene p,#drawerPanelProject .project-cat-scene p{margin:0!important}

@@ -11692,3 +11692,10 @@ body.walk-wide #yandexScreen #pointSheet:not(.closed){max-height:calc(100% - var
 #routeDetailModal .content-modal-sheet::before,#routeDetailModal .content-modal-sheet::after{display:none!important}
 #routeDetailModal .content-modal-head,#routeDetailModal .route-detail-overview,#routeDetailModal .content-modal-scroll{background:transparent!important}
 #routeDetailModal .content-modal-actions{background:rgba(251,240,219,.96)!important}
+
+/* v79 — the photo itself carries its compact magnifier, with no extra text row. */
+.story-image-slider[data-gallery-variant=v2] .info-gallery-frame{position:relative!important}
+.story-image-slider[data-gallery-variant=v2] .info-gallery-frame .gallery-examine{position:absolute!important;top:8px!important;right:8px!important;bottom:auto!important;left:auto!important;z-index:4;display:grid!important;place-items:center!important;width:36px!important;height:36px!important;min-height:36px!important;margin:0!important;padding:9px!important;border:1px solid #962e2a40!important;border-radius:50%!important;background:#fff8eceb!important;box-shadow:none!important;color:#962e2a!important;cursor:zoom-in}
+.story-image-slider[data-gallery-variant=v2] .gallery-examine svg{width:18px!important;height:18px!important;display:block}
+.story-image-slider[data-gallery-variant=v2] .gallery-examine:hover{background:#fff8ec!important;border-color:#962e2a!important}
+.story-image-slider[data-gallery-variant=v2] .gallery-examine::after{content:"";position:absolute;inset:-4px}

@@ -160,16 +160,22 @@ function setSelectedRoute(id){
  resetAudio();
  rebuildRouteObjects();
 }
-function selectPoint(id,{fromMap=false}={}){
+function selectPoint(id,{fromMap=false,keepSheetClosed=false}={}){
+ if(keepSheetClosed){pointSheet.classList.add('browsing-folded');requestAnimationFrame(()=>requestAnimationFrame(()=>pointSheet.classList.remove('browsing-folded')))}
  selectedPoints[selectedRoute]=Number(id);
  markViewed(selectedRoute,point().id);
  updateRouteUI();
  resetAudio();
- openSheet();
+ keepSheetClosed?closeSheet():openSheet();
 }
 
-function changePoint(step){const r=route();const next=Math.max(1,Math.min(r.points.length,point().id+step));if(next!==point().id)selectPoint(next)}
-function updatePointNavState(){const p=point(),r=route();const back=$('mapBack'),next=$('nextRoute');if(back)back.disabled=p.id===1;if(next)next.disabled=p.id===r.points.length;}
+function changePoint(step,keepSheetClosed=false){const r=route();const next=Math.max(1,Math.min(r.points.length,point().id+step));if(next!==point().id)selectPoint(next,{keepSheetClosed})}
+function updatePointNavState(){
+ const p=point(),r=route();
+ ['mapBack','peekPrev'].forEach(id=>{const button=$(id);if(button)button.disabled=p.id===1});
+ ['nextRoute','peekNext'].forEach(id=>{const button=$(id);if(button)button.disabled=p.id===r.points.length});
+ const counter=$('peekCounter');if(counter)counter.textContent=`Точка ${String(p.id).padStart(2,'0')} из ${String(r.points.length).padStart(2,'0')}`;
+}
 function openSheet(){$('sheetToggle').setAttribute('aria-label','Свернуть карточку');$('sheetToggle').setAttribute('aria-expanded','true');pointSheet.classList.remove('closed');yandexScreen.classList.add('sheet-open');yandexScreen.classList.remove('sheet-closed');resizeMapSoon(); focusActiveRouteForOpenSheet(); }
 function closeSheet(){$('sheetToggle').setAttribute('aria-label','Развернуть карточку');$('sheetToggle').setAttribute('aria-expanded','false');pointSheet.classList.add('closed');yandexScreen.classList.add('sheet-closed');yandexScreen.classList.remove('sheet-open');resizeMapSoon(); focusActiveRouteForClosedSheet(); }
 function toggleSheet(){pointSheet.classList.contains('closed')?openSheet():closeSheet()}
@@ -929,7 +935,9 @@ safeOn('geoAction','click',locateUser);
 safeOn('sheetToggle','click',(e)=>{e.stopPropagation();toggleSheet();});
 safeOn('sheetPeek','click',openSheet);
 pointSheet.addEventListener('click',e=>{ if(pointSheet.classList.contains('closed')) openSheet(); });
-safeOn('mapRouteStart','click',()=>{selectPoint(route().points[0].id);closeSheet();fitSelectedRouteBounds();});
+safeOn('mapRouteStart','click',()=>{selectPoint(route().points[0].id,{keepSheetClosed:true});fitSelectedRouteBounds();});
+safeOn('peekPrev','click',e=>{e.stopPropagation();changePoint(-1,true)});
+safeOn('peekNext','click',e=>{e.stopPropagation();changePoint(1,true)});
 safeOn('mapBack','click',()=>changePoint(-1));
 safeOn('nextRoute','click',()=>changePoint(1));
 drawer.addEventListener('click',e=>{if(e.target===drawer)closeDrawer()});

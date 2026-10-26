@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta name="app-build" content="watercolor-v76" />
+  <meta name="app-build" content="watercolor-v77" />
   <meta name="yandex-maps-api-key" content="" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#962e2a" />
   <title>Город музыки и театров</title>
-  <link rel="manifest" href="./manifest.webmanifest?v=watercolor-76" />
-  <link rel="stylesheet" href="./styles.css?v=watercolor-76" />
-  <link rel="stylesheet" href="./routes.css?v=watercolor-76" />
+  <link rel="manifest" href="./manifest.webmanifest?v=watercolor-77" />
+  <link rel="stylesheet" href="./styles.css?v=watercolor-77" />
+  <link rel="stylesheet" href="./routes.css?v=watercolor-77" />
 </head>
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs><filter id="museumLogoTint" color-interpolation-filters="sRGB"><feFlood flood-color="#352c29"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs></svg>
@@ -118,6 +118,11 @@
           </div>
           
         </div>
+        <nav class="compact-point-nav" aria-label="Переключение точек маршрута">
+          <button id="peekPrev" type="button" aria-label="Предыдущая точка маршрута"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 6-6 6 6 6M8 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <span id="peekCounter" aria-live="polite">Точка 01 из 07</span>
+          <button id="peekNext" type="button" aria-label="Следующая точка маршрута"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 6 6 6-6 6M16 12H4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </nav>
         <div class="point-content">
           <div class="point-sheet-top">
             <div>
@@ -179,7 +184,7 @@
               <div class="project-story project-story-v44">
 <p class="project-story-lead">Дорогой друг!</p>
 <p>Вы приобрели единый билет в филиалы Санкт-Петербургского музея театрального и музыкального искусства — впереди большое путешествие!</p>
-<div class="project-story-scene project-cat-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/project-cat.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. Здесь преломляются пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
+<div class="project-story-scene project-cat-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/project-cat.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. <span class="project-reading-phrase">Здесь преломляются</span> пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
 <p>Вас ждут четыре театрализованных променада в компании выдающихся персон: Фёдора Шаляпина, Николая Римского-Корсакова, Сергея Дягилева, Василия Самойлова, — а также их друзей, соратников и завистников. Каждая прогулка ближе познакомит с героями, память о которых хранит Музей, и откроет новые главы из истории его филиалов.</p>
 <p>Как бы Вам ни хотелось поскорее начать путешествие, просим сначала <a class="project-instruction-link" href="#instruction" data-project-instruction>ознакомиться с краткой инструкцией</a> — скорее всего, там найдутся ответы на все вопросы.</p>
 <p class="project-story-end">Итак, занавес открывается!</p>
@@ -259,7 +264,7 @@
             <div class="project-story project-story-v44">
 <p class="project-story-lead">Дорогой друг!</p>
 <p>Вы приобрели единый билет в филиалы Санкт-Петербургского музея театрального и музыкального искусства — впереди большое путешествие!</p>
-<div class="project-story-scene project-cat-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/project-cat.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. Здесь преломляются пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
+<div class="project-story-scene project-cat-scene"><span class="project-figure-wrap" aria-hidden="true"><img src="./assets/project-cat.png" alt=""></span><p>Город музыки и театров — таинственный двойник Петербурга: узнать о нём дано далеко не каждому. <span class="project-reading-phrase">Здесь преломляются</span> пространство и время, рождаются грандиозные планы, случаются судьбоносные встречи и свершаются великие замыслы.</p></div>
 <p>Вас ждут четыре театрализованных променада в компании выдающихся персон: Фёдора Шаляпина, Николая Римского-Корсакова, Сергея Дягилева, Василия Самойлова, — а также их друзей, соратников и завистников. Каждая прогулка ближе познакомит с героями, память о которых хранит Музей, и откроет новые главы из истории его филиалов.</p>
 <p>Как бы Вам ни хотелось поскорее начать путешествие, просим сначала <a class="project-instruction-link" href="#instruction" data-project-instruction>ознакомиться с краткой инструкцией</a> — скорее всего, там найдутся ответы на все вопросы.</p>
 <p class="project-story-end">Итак, занавес открывается!</p>
@@ -428,6 +433,6 @@
       </div>
     </aside>
 <dialog class="cast-photo-dialog" id="castPhotoDialog" aria-label="Архивная фотография"><button class="cast-photo-close" type="button" aria-label="Закрыть фотографию">×</button><img alt=""><p></p></dialog>
-  <script src="./app.watercolor.js?v=watercolor-76"></script>
+  <script src="./app.watercolor.js?v=watercolor-77"></script>
 </body>
 </html>
